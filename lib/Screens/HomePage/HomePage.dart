@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:gtr_test/Screens/HomePage/Vegetable.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -158,21 +159,26 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Column(
                         children: [
-                          Container(
-                            height: 80,
-                            width: 80,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(5),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey.shade400,
-                                    spreadRadius: 0.5,
-                                    blurRadius: 4,
-                                    offset: const Offset(0, 2))
-                              ],
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Vegetable()));
+                            },
+                            child: Container(
+                              height: 80,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(5),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade400,
+                                      spreadRadius: 0.5,
+                                      blurRadius: 4,
+                                      offset: const Offset(0, 2))
+                                ],
+                              ),
+                              child: Image.asset('assets/images/pageview1.png'),
                             ),
-                            child: Image.asset('assets/images/pageview1.png'),
                           ),
                           SizedBox(
                             height: 10,
