@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gtr_test/widgets/NavBar.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-import 'HomePage/HomePage.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
@@ -38,7 +37,7 @@ class _OnBoardingState extends State<OnBoarding> {
           children: [
             GestureDetector(
               onTap: (){
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePage()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> NavBar()));
               },
               child: Text('Skip',style: TextStyle(fontSize: 18,color: Colors.black54),),
             ),
