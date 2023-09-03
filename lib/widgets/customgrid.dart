@@ -44,7 +44,17 @@ class _CustomGridState extends State<CustomGrid> {
                   Container(
                     height: 120,
                       width: double.infinity,
-                      child: Image.asset('assets/images/pageview1.png',fit: BoxFit.fill,),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 50),
+                            child: Image.asset('assets/images/pageview1.png',width: 70,),
+                          ),
+                          Icon(Icons.favorite_border),
+                        ],
+                      ),
                   ),
                   Text("Broccoli flower",
                       style: TextStyle(
